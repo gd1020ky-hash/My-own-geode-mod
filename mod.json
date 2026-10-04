@@ -1,0 +1,48 @@
+#include <Geode/Geode.hpp>
+#include <Geode/modify/EditorUI.hpp>
+
+#include "AutoDecorator.hpp"
+
+using namespace geode::prelude;
+
+class $modify(AutoDecoratorEditorUI, EditorUI) {
+
+    bool init(LevelEditorLayer* levelEditorLayer) {
+
+        if (!EditorUI::init(levelEditorLayer))
+            return false;
+
+        log::info("Auto Decorator: Editor loaded!");
+
+        // Create the decorator.
+        auto decorator = new AutoDecorator::Decorator();
+
+        // Store it so the editor can use it later.
+        this->m_fields->m_decorator = decorator;
+
+        return true;
+    }
+
+
+    void onAutoDecorate(CCObject*) {
+
+        log::info("Auto Decorator: button pressed!");
+
+        if (!this->m_fields->m_decorator) {
+            log::error("Auto Decorator: decorator unavailable!");
+            return;
+        }
+
+        // Start the automatic decoration process.
+        this->m_fields->m_decorator->decorate(this);
+    }
+};
+
+
+$on_mod(Loaded) {
+
+    log::info("==============================");
+    log::info(" Auto Decorator loaded!");
+    log::info("==============================");
+
+}
