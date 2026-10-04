@@ -1,0 +1,11 @@
+{
+    "geode": "REPLACE_WITH_GEODE_VERSION",
+    "gd": {
+        "android": "2.2.144"
+    },
+    "id": "geometrydashpro.auto-decorator",
+    "name": "Auto Decorator",
+    "version": "v1.0.0",
+    "developer": "geometrydashpro",
+    "description": "Automatically decorates Geometry Dash levels."
+}
