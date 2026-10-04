@@ -1,0 +1,26 @@
+name: Build AutoDecorator
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Geode mod
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          target: Android64
+          sdk: given
+
+      - name: Upload Geode mod
+        uses: actions/upload-artifact@v4
+        with:
+          name: AutoDecorator-Android64
+          path: ${{ steps.build.outputs.build-output }}/*.geode
