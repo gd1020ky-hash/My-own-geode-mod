@@ -1,0 +1,13 @@
+{
+    "geode": "4.0.0",
+    "version": "v1.0.0",
+    "id": "geometrydashpro.auto-decorator",
+    "name": "Auto Decorator",
+    "developer": "geometrydashpro",
+    "description": "Automatically generates decoration for Geometry Dash levels.",
+    "repository": "https://github.com/geode-sdk/geode",
+    "tags": [
+        "editor",
+        "enhancement"
+    ]
+}
