@@ -1,5 +1,5 @@
 {
-    "geode": "REPLACE_WITH_GEODE_VERSION",
+    "geode": "v5.10.0",
     "gd": {
         "android": "2.2.144"
     },
@@ -7,5 +7,5 @@
     "name": "Auto Decorator",
     "version": "v1.0.0",
     "developer": "geometrydashpro",
-    "description": "Automatically decorates Geometry Dash levels."
+    "description": "AI Automatically decorates Geometry Dash levels for you."
 }
